@@ -1,0 +1,11 @@
+﻿node_modules
+npm-debug.log
+.git
+.github
+data/*.db
+data/*.db-shm
+data/*.db-wal
+tests/temp_test_data
+taskflow.zip
+.vscode
+.idea

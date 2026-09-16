@@ -1,0 +1,20 @@
+﻿services:
+  taskflow:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: taskflow-app
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - PORT=3000
+      - HOST=0.0.0.0
+      - DB_PATH=/data/taskflow.db
+    volumes:
+      - taskflow_data:/data
+
+volumes:
+  taskflow_data:
+    driver: local
